@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 6</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      color: #333;
+      font-size: 20px;
+      width: 200px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ziad mohammed</h1> <!-- Replace with your real name -->
+
+  <input type="number" id="grade" placeholder="أدخل درجتك (0 - 100)" min="0" max="100">
+  <button onclick="calculate()">احسب التقدير</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculate() {
+      const grade = parseInt(document.getElementById('grade').value);
+      let result = '';
+
+      if (grade >= 85) {
+        result = 'ممتاز';
+      } else if (grade >= 75) {
+        result = 'جيد جداً';
+      } else if (grade >= 60) {
+        result = 'جيد';
+      } else {
+        result = 'ضعيف';
+      }
+
+      document.getElementById('result').innerHTML = 'تقديرك: ' + result;
+    }
+  </script>
+
+</body>
+</html>
